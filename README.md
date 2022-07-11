@@ -1,16 +1,4 @@
-# proje_fruit_shopping
+Uygulama Ui Tasarımı
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![resim (1)](https://user-images.githubusercontent.com/84284375/178369252-39146274-5b1e-4d60-ae89-d066173b4b5a.jpeg)
+![resim (2)](https://user-images.githubusercontent.com/84284375/178369254-0dd4b249-54c0-4a2b-91c7-b9495ac17233.jpeg)
