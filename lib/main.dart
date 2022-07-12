@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: TextButton(
-                  child: Text("Already have an Account? Sign-in",
+                  child: const Text("Already have an Account? Sign-in",
                   style:TextStyle(
                     color: Color(0xFFF1C950),
                     fontSize: 12.0,
@@ -137,11 +137,11 @@ class _HomePageState extends State<HomePage> {
                   height: 60,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainScreen()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MainScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xFFF1C950),
-                      shape: RoundedRectangleBorder(
+                      primary: const Color(0xFFF1C950),
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15.0)),
                       )
                     ),

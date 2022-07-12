@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proje_fruit_shopping/fruits.dart';
+import 'package:proje_fruit_shopping/sellFruit.dart';
 
 class AllFruits extends StatefulWidget {
   const AllFruits({Key? key}) : super(key: key);
@@ -41,8 +42,8 @@ class _AllFruitsState extends State<AllFruits> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF1E1E1E),
-        title: Text("All Fruits"),
+        backgroundColor: const Color(0xFF1E1E1E),
+        title: const Text("All Fruits"),
       ),
       backgroundColor: const Color(0xFF1E1E1E),
       body: FutureBuilder<List<Fruits>>(
@@ -61,78 +62,83 @@ class _AllFruitsState extends State<AllFruits> {
                 return Padding(
                   padding: const EdgeInsets.only(top: 15.0),
                   child: Center(
-                    child: Card(
-                      color: const Color(0xFF2C2C2C),
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(100.0),
-                            topRight: Radius.circular(100.0),
-                            bottomLeft: Radius.circular(50.0),
-                            bottomRight: Radius.circular(50.0)
-                        )
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 35.0),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              width: 150,
-                                height: 150,
-                                child: Image.asset(fruit.imagesName)
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15.0,left: 15.0),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(fruit.category,
-                                  style:const TextStyle(
-                                      color: Color(0xFFF1C950),
-                                      fontFamily: "Inter",
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal,
-                                    letterSpacing: 5.0,
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SellFruit(fruit: fruit,)));
+                      },
+                      child: Card(
+                        color: const Color(0xFF2C2C2C),
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(100.0),
+                              topRight: Radius.circular(100.0),
+                              bottomLeft: Radius.circular(50.0),
+                              bottomRight: Radius.circular(50.0)
+                          )
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 35.0),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 150,
+                                  height: 150,
+                                  child: Image.asset(fruit.imagesName)
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15.0,left: 15.0),
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(fruit.category,
+                                    style:const TextStyle(
+                                        color: Color(0xFFF1C950),
+                                        fontFamily: "Inter",
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.normal,
+                                      letterSpacing: 5.0,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
 
-                            Padding(
-                              padding: const EdgeInsets.only(top: 5.0,left: 15.0),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(fruit.fruitName,
-                                  style:const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 30,
-                                      fontFamily: "Inter",
-                                      fontWeight: FontWeight.w700),
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10.0,left: 15.0),
-                              child: Row(
-                                children: [
-                                  Text("\$${fruit.sale}",
-                                    style: const TextStyle(
-                                        color: Color(0xFFF1C950),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5.0,left: 15.0),
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(fruit.fruitName,
+                                    style:const TextStyle(
+                                        color: Colors.white,
                                         fontSize: 30,
                                         fontFamily: "Inter",
                                         fontWeight: FontWeight.w700),
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(left: 5.0),
-                                    child: Text("per Kg",style: TextStyle(
-                                      fontSize: 15,
-                                      color: Colors.grey
-                                    ),),
-                                  )
-                                ],
+                                ),
                               ),
-                            )
 
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10.0,left: 15.0),
+                                child: Row(
+                                  children: [
+                                    Text("\$${fruit.sale}",
+                                      style: const TextStyle(
+                                          color: Color(0xFFF1C950),
+                                          fontSize: 30,
+                                          fontFamily: "Inter",
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(left: 5.0),
+                                      child: Text("per Kg",style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.grey
+                                      ),),
+                                    )
+                                  ],
+                                ),
+                              )
+
+                            ],
+                          ),
                         ),
                       ),
                     ),
