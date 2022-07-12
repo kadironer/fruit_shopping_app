@@ -156,6 +156,167 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
           ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 380.0,left: 20.0,right: 20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 175,
+                        height: 300,
+                        child: Card(
+                          color: const Color(0xFF2C2C2C),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0),topRight: Radius.circular(75.0),bottomLeft: Radius.circular(30.0),bottomRight: Radius.circular(30.0))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 25.0),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width:110,
+                                    height: 110,
+                                    child: Image.asset("images/fruits/apple.png"),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 20.0,left: 15.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Fruit",
+                                      style:TextStyle(
+                                        color: Color(0xFFF1C950),
+                                        fontFamily: "Inter",
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.normal,
+                                        letterSpacing: 5.0,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 10.0,left: 15.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Apple",
+                                      style:TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontFamily: "Inter",
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15.0,left: 15.0),
+                                  child: Row(
+                                    children: const [
+                                      Text("\$15.0",
+                                        style: TextStyle(
+                                            color: Color(0xFFF1C950),
+                                            fontSize: 20,
+                                            fontFamily: "Inter",
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 5.0),
+                                        child: Text("per Kg",style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey
+                                        ),),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+
+
+
+                      SizedBox(
+                        width: 175,
+                        height: 300,
+                        child: Card(
+                          color: const Color(0xFF2C2C2C),
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0),topRight: Radius.circular(75.0),bottomLeft: Radius.circular(30.0),bottomRight: Radius.circular(30.0))
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 25.0),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  width:110,
+                                  height: 110,
+                                  child: Image.asset("images/fruits/banana.png"),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 20.0,left: 15.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Fruit",
+                                      style:TextStyle(
+                                        color: Color(0xFFF1C950),
+                                        fontFamily: "Inter",
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.normal,
+                                        letterSpacing: 5.0,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 10.0,left: 15.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Banana",
+                                      style:TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontFamily: "Inter",
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15.0,left: 15.0),
+                                  child: Row(
+                                    children: const [
+                                      Text("\$23.0",
+                                        style: TextStyle(
+                                            color: Color(0xFFF1C950),
+                                            fontSize: 20,
+                                            fontFamily: "Inter",
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 5.0),
+                                        child: Text("per Kg",style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey
+                                        ),),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+
+                    ],
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
