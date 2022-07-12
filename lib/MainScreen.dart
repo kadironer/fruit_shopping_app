@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            color: Color(0xFF2C2C2C),
+            color: Color(0xFF1E1E1E),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0,left: 20.0,right: 20.0),
@@ -61,18 +62,33 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(48.0),
-            child: Column(
-              children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.white,
-                )
-              ],
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 90.0,left: 20.0,right: 20.0),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 230,
+                    child: Card(
+                      semanticContainer: true,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(15.0))
+                      ),
+                      child: Image.asset("images/campaigns.png",fit: BoxFit.fill),
+                    ),
+                  )
+                ],
+              ),
             ),
-          )
+          ),
+          Column(
+            children: [
+              Text("Fruits")
+            ],
+          ),
         ],
       ),
     );
