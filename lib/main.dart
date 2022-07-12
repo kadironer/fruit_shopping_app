@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proje_fruit_shopping/MainScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  const HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -135,7 +136,9 @@ class _HomePageState extends State<HomePage> {
                   width: 320,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainScreen()));
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFFF1C950),
                       shape: RoundedRectangleBorder(
