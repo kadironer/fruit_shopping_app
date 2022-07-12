@@ -59,6 +59,19 @@ class _MainScreenState extends State<MainScreen> {
 
               ],
             ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(48.0),
+            child: Column(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.white,
+                )
+              ],
+            ),
           )
         ],
       ),
