@@ -54,7 +54,7 @@ class _AllFruitsState extends State<AllFruits> {
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 2/3.5,
+                childAspectRatio: 2/3.7,
               ),
               itemCount: fruitList!.length,
               itemBuilder: (context,indeks){
